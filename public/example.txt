@@ -1,0 +1,8 @@
+{
+    "title": "Ada Acara di Rumah Pak RW",
+    "author": "Farhan",
+    "category_id": "1",
+    "updated_at": "2023-07-03T00:01:04.000000Z",
+    "created_at": "2023-07-03T00:01:04.000000Z",
+    "id": 111
+}

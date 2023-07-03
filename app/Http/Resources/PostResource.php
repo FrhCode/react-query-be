@@ -22,6 +22,8 @@ class PostResource extends JsonResource
                 'id' => $this->category->id,
                 'name' => $this->category->name
             ],
+            'active_days' => $this->active_days,
+            'author_category_name' => $this->author_category_name,
             'created_at' => $this->created_at->toDateTimeString(),
             'updated_at' => $this->updated_at->toDateTimeString()
         ];

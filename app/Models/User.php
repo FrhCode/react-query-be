@@ -13,6 +13,12 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
+
+    public function forums()
+    {
+        return $this->belongsToMany(Forum::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

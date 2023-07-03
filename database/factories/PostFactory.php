@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,7 +22,8 @@ class PostFactory extends Factory
         return [
             "title" => $this->faker->text(20),
             "author" => $this->faker->name(),
-            'category_id' => $category->random()->id
+            'category_id' => $category->random()->id,
+            'created_at' => Carbon::now()->subDays(rand(0, 29))
         ];
     }
 }

@@ -23,7 +23,8 @@ class ForumUserFactory extends Factory
     {
         return [
             'user_id' =>  User::inRandomOrder()->pluck('id')->first(),
-            'forum_id' => Forum::inRandomOrder()->pluck('id')->first()
+            'forum_id' => Forum::inRandomOrder()->pluck('id')->first(),
+            'approved' => (bool)rand(0, 1)
         ];
     }
 }

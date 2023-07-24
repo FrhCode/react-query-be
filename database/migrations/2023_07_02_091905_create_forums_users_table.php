@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('forum_id')->constrained();
+            $table->boolean('approved')->default(0);
             $table->timestamps();
         });
     }

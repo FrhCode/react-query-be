@@ -103,7 +103,18 @@ Route::get('/tes7', function (Request $request) {
     return $posts;
 });
 
+
 Route::get('/tes8', function (Request $request) {
 
     return PostResource::collection(Post::all());
 })->middleware(['auth:sanctum', 'permission:create posts']);
+
+Route::get('/tes9', function (Request $request) {
+
+    // $user = '';
+    $user = User::when($request->user_id, function ($query) use ($request) {
+        $query->where('id', $request->user_id);
+    })->get();
+
+    return $user;
+});

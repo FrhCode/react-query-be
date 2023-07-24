@@ -10,5 +10,5 @@ class ForumUser extends Model
     use HasFactory;
 
     protected $table = 'forum_user';
-    protected $fillable = ['user_id', 'forum_id'];
+    protected $fillable = ['user_id', 'forum_id', 'approved'];
 }

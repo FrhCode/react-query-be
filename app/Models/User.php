@@ -16,7 +16,12 @@ class User extends Authenticatable
 
     public function forums()
     {
-        return $this->belongsToMany(Forum::class);
+        return $this->belongsToMany(Forum::class)->withPivot('approved');
+    }
+
+    public function approvedForums()
+    {
+        return $this->belongsToMany(Forum::class)->wherePivot('approved', 1);
     }
 
     /**

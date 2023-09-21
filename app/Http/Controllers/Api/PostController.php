@@ -20,7 +20,7 @@ class PostController extends Controller
 
         $posts = Post::when($request->filled('category_id'), function ($query) use ($request) {
             $query->where('category_id', $request->category_id);
-        })->with('category')->orderBy('created_at', 'desc')->get();
+        })->with('category')->orderBy('created_at', 'desc')->paginate(10);
 
         //        dd($posts);
         // $posts = Post::with('category')->where('id', 1)->get();
